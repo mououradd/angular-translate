@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg bg-body-secondary">
+  <div class="container">
+    <a class="navbar-brand" href="#"
+      ><img src="assets/pngwing.png" width="50px" alt=""
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">{{'home' | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{'features'|translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{'pricing'| translate}}</a>
+        </li>
+      </ul>
+      <button class="btn btn-primary  " [ngClass]="{'me-auto':currentLang == 'en','ms-auto':currentLang == 'ar'}" (click)="switchLanguage()">
+        {{ currentLang == "en" ? "AR" : "EN" }}
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="container mt-5 p-5 fs-4">{{ "paragraph" | translate }}</div>
